@@ -18,11 +18,12 @@ const UserForm = () => {
 		showForm ? (<>
 			<div className={s.overlay} onClick={closeForm} />
 			{formType === 'signup' ? (
-				<Login toggleCurrentFormType={toggleCurrentFormType}
+					<Register toggleCurrentFormType={toggleCurrentFormType}
 					closeForm={closeForm} />
+
 			) : (
-				<Register toggleCurrentFormType={toggleCurrentFormType}
-					closeForm={closeForm} />
+				<Login toggleCurrentFormType={toggleCurrentFormType}
+				closeForm={closeForm} />
 			)}
 		</>
 		) : (
@@ -32,3 +33,12 @@ const UserForm = () => {
 }
 
 export default UserForm;
+
+
+
+
+
+
+
+
+

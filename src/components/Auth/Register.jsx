@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { useDispatch } from "react-redux";
 import { createUser } from "../../features/user/userSlice";
 
-import styles from "./Register.module.scss";
+import s from './index.module.scss';
 
 const Register = ({ toggleCurrentFormType, closeForm }) => {
 	const dispatch = useDispatch();
@@ -10,7 +10,6 @@ const Register = ({ toggleCurrentFormType, closeForm }) => {
 		name: "",
 		email: "",
 		password: "",
-		avatar: "",
 	});
 
 	const handleChange = ({ target: { value, name } }) => {
@@ -29,17 +28,17 @@ const Register = ({ toggleCurrentFormType, closeForm }) => {
 	};
 
 	return (
-		<div className={styles.wrapper}>
-			<div className={styles.close} onClick={closeForm}>
+		<div className={s.wrapper}>
+			<div className={s.close} onClick={closeForm}>
 				<svg className="icon">
 					<use xlinkHref={`${process.env.PUBLIC_URL}/sprite.svg#close`} />
 				</svg>
 			</div>
 
-			<div className={styles.title}>Sign Up</div>
+			<div className={s.title}>Sign Up</div>
 
-			<form className={styles.form} onSubmit={handleSubmit}>
-				<div className={styles.group}>
+			<form className={s.form} onSubmit={handleSubmit}>
+				<div className={s.group}>
 					<input
 						type="email"
 						placeholder="Your email"
@@ -51,7 +50,7 @@ const Register = ({ toggleCurrentFormType, closeForm }) => {
 					/>
 				</div>
 
-				<div className={styles.group}>
+				<div className={s.group}>
 					<input
 						type="name"
 						placeholder="Your name"
@@ -63,7 +62,7 @@ const Register = ({ toggleCurrentFormType, closeForm }) => {
 					/>
 				</div>
 
-				<div className={styles.group}>
+				<div className={s.group}>
 					<input
 						type="password"
 						placeholder="Your password"
@@ -75,23 +74,11 @@ const Register = ({ toggleCurrentFormType, closeForm }) => {
 					/>
 				</div>
 
-				<div className={styles.group}>
-					<input
-						type="avatar"
-						placeholder="Your avatar"
-						name="avatar"
-						value={values.avatar}
-						autoComplete="off"
-						onChange={handleChange}
-						required
-					/>
-				</div>
-
-				<div className={styles.link}
+				<div className={s.link}
 					onClick={() => toggleCurrentFormType("login")}
 				>I already have an account</div>
 
-				<button type="submit" className={styles.submit}>
+				<button type="submit" className={s.submit}>
 					Create an account
 				</button>
 			</form>

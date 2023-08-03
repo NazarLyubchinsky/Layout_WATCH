@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { useDispatch } from "react-redux";
 import { loginUser } from "../../features/user/userSlice";
 
-import s from "./Login.module.scss";
+import s from "./index.module.scss";
 
 const Login = ({ toggleCurrentFormType, closeForm }) => {
 	const dispatch = useDispatch();
