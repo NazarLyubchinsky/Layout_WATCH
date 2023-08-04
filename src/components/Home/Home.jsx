@@ -8,7 +8,7 @@ import Products from '../Products/Products'
 import s from './Home.module.scss'
 const Home = () => {
 	const dispatch = useDispatch();
-	const { products: { list, filtered }, categories } = useSelector((state) => state);
+	const { list } = useSelector((state) => state.products);
 
 
 
@@ -16,9 +16,6 @@ const Home = () => {
 	useEffect(() => {
 		dispatch(getProducts());
 	}, [dispatch]);
-
-
-
 
 	return (
 		<>

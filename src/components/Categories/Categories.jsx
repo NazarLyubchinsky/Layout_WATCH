@@ -8,7 +8,6 @@ const Categories = ({ title, products = [], amount }) => {
 	return (
 		<section className={s.section}>
 			<h2>{title}</h2>
-
 			<div className={s.list}>
 				{list.map(({ id, name, image }) => (
 					<Link to={`/categories/${id}`} key={id} className={s.item}>

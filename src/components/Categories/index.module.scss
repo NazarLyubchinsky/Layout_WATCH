@@ -1,0 +1,41 @@
+/*CATEGORY */
+.title {
+	padding-top: 20px;
+}
+.more {
+	display: flex;
+	justify-content: center;
+	padding: 20px 0;
+}
+
+.filters {
+	display: flex;
+	justify-content: end;
+	gap: 20px;
+	width: 100%;
+	margin-top: 24px;
+	padding-right: 20px;
+}
+
+.filter {
+	background: var(--bg);
+	border-radius: 8px;
+	padding: 12px 24px;
+	width: max-content;
+	display: flex;
+	align-items: center;
+	min-width: 225px;
+}
+
+.filter input {
+	font-weight: 400;
+	font-size: 13px;
+	line-height: 16px;
+}
+.back {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 24px;
+	gap: 15px;
+}

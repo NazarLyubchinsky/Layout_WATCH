@@ -7,7 +7,6 @@ import heart from '../../images/heart.svg'
 const Favorite = () => {
 	const dispatch = useDispatch();
 	const { favorite } = useSelector(({ user }) => user);
-	console.log(favorite)
 
 	// const removeItem = (id) => {
 	// 	dispatch(removeItemToFavorite(id));
@@ -23,17 +22,11 @@ const Favorite = () => {
 				<>
 					<div className={s.list}>
 						{favorite.map((item) => {
-							const { title, category, images, price, id, updatedAt } = item;
-
-							const updatedAtDate = new Date(updatedAt);
-							const hours = updatedAtDate.getHours();
-							const minutes = updatedAtDate.getMinutes();
-							const formattedTime = `${hours}:${minutes < 10 ? '0' : ''}${minutes}`;
-							const formattedDate = updatedAtDate.toLocaleDateString();
+							const { title, category, images,  id } = item;
 							return (
-								<div className={s.list}>
+								<div className={s.list} key={id}>
 									<div className={s.product}>
-										<div className={s.item} key={id}>
+										<div className={s.item} >
 											<div className={s.box}>
 												<div className={s.group}>
 													<div className={s.overlap__group} style={{ backgroundImage: `url(${images[0]})`, }}>

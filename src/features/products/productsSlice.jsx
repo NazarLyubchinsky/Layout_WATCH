@@ -21,7 +21,7 @@ const productsSlice = createSlice({
 		list: [],
 		filtered: [],
 		related: [],
-		isLoading: false
+		isLoading: false,
 	},
 	reducers: {
 

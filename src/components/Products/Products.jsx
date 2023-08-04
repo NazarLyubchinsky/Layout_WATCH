@@ -1,9 +1,7 @@
-
 import React from "react";
 import { Link } from "react-router-dom";
 
 import s from "./index.module.scss";
-import heart from '../../images/heart.svg'
 
 const Products = ({ title, style = {}, products = [], amount }) => {
 
@@ -12,9 +10,8 @@ const Products = ({ title, style = {}, products = [], amount }) => {
 	return (
 		<div className={s.products} style={style}>
 			{title && <h2 className={s.title}>{title}</h2>}
-
 			<div className={s.list}>
-				{list.map(({ id, images, title, category: { name: cat }, price }) => (
+				{list.map(({ id, images, title, category: { name: cat } }) => (
 					<Link to={`/products/${id}`} key={id} className={s.product}>
 						<div className={s.box}>
 							<div className={s.group}>
@@ -23,10 +20,6 @@ const Products = ({ title, style = {}, products = [], amount }) => {
 										<div className={s.text__wrapper}>{title}</div>
 										<div className={s.div}>{cat}</div>
 									</div>
-									<div className={s.frame}>
-										<img className={s.heart} alt="Heart" src={heart} />
-									</div>
-
 								</div>
 							</div>
 						</div>

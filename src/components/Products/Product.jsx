@@ -1,18 +1,16 @@
-import React from "react";
+import React, { useState } from "react";
 import { useDispatch } from "react-redux";
 import { Link } from "react-router-dom";
-// import { useDispatch } from "react-redux";
 
 import { ROUTES } from "../../utils/routes";
 
 import s from "./index.module.scss";
 
-import { addItemToCart, addItemToFavorite } from "../../features/user/userSlice";
+import { addItemToFavorite } from "../../features/user/userSlice";
 
 
 const Product = (item) => {
 	const { title, images, description, updatedAt } = item;
-
 	const updatedAtDate = new Date(updatedAt);
 	const hours = updatedAtDate.getHours();
 	const minutes = updatedAtDate.getMinutes();
@@ -21,21 +19,19 @@ const Product = (item) => {
 
 	const dispatch = useDispatch();
 
-	// const [currentImage, setCurrentImage] = useState();
-	// const [currentSize, setCurrentSize] = useState();
+	const [showMessage, setShowMessage] = useState(false);
+	const [isAddedToFavorite, setIsAddedToFavorite] = useState(false);
 
-	// useEffect(() => {
-	// 	if (!images.length) return;
-
-	// 	setCurrentImage(images[0]);
-	// }, [images]);
-
-	// const addToCart = () => {
-	// 	dispatch(addItemToCart(item));
-	// };
 	const addToFavorite = () => {
-		dispatch(addItemToFavorite(item));
-		
+		if (!isAddedToFavorite) {
+			dispatch(addItemToFavorite(item));
+			setShowMessage(true);
+			// This will reset the showMessage state after 3 seconds
+			setTimeout(() => {
+				setShowMessage(false);
+			}, 1700);
+			setIsAddedToFavorite(true);
+		}
 	};
 
 	return (
@@ -56,13 +52,6 @@ const Product = (item) => {
 					<p className={s.description}>{description}</p>
 
 					<div className={s.actions}>
-						{/* <button
-						onClick={addToCart}
-						className={s.add}
-						disabled={!currentSize}
-					>
-						Add to cart
-					</button> */}
 						<button onClick={addToFavorite} className={s.favourite}>Add to favourites</button>
 					</div>
 
@@ -73,8 +62,15 @@ const Product = (item) => {
 					</div>
 				</div>
 			</div>
+			{showMessage && (
+				<div id={s.message} className={s.mess}>
+					Successfully
+				</div>
+			)}
 		</section>
 	);
 };
 
 export default Product;
+
+
