@@ -20,7 +20,7 @@ const Home = () => {
 	return (
 		<>
 			<section className={s.home}>
-				<Products products={list} amount={4} title='Trending' />
+				<Products products={list} amount={8} title='Trending' />
 			</section>
 		</>
 	)

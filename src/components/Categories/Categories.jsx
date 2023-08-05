@@ -19,6 +19,7 @@ const Categories = ({ title, products = [], amount }) => {
 					</Link>
 				))}
 			</div>
+			
 		</section>
 	)
 }

@@ -74,6 +74,9 @@ const userSlice = createSlice({
 				state.favorite.push({ ...payload, quantity: 1 });
 			}
 		},
+		removeItemToFavorite: (state, { payload }) => {
+			state.favorite = state.favorite.filter(({ id }) => id !== payload)
+		},
 	},
 	extraReducers: (builder) => {
 		builder.addCase(createUser.fulfilled, addCurrentUser);
@@ -83,7 +86,7 @@ const userSlice = createSlice({
 	}
 })
 
-export const { toggleFormType, toggleForm, addItemToFavorite } = userSlice.actions;
+export const { toggleFormType, toggleForm, addItemToFavorite, removeItemToFavorite } = userSlice.actions;
 
 export default userSlice.reducer
 

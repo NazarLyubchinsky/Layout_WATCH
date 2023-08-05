@@ -1,0 +1,155 @@
+.contact {
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+}
+.title {
+	position: relative;
+	display: flex;
+	justify-content: center;
+}
+
+.title .overlap__group {
+	background-image: url("../../images/Contact/EllipseContact.png");
+	background-size: 100% 100%;
+	height: 367px;
+	width: 690px;
+}
+
+.title .about__us {
+	position: relative;
+	text-align: center;
+	top: 110px;
+	font-size: 54px;
+}
+
+.title .div {
+	display: flex;
+	justify-content: center;
+	gap: 4px;
+	position: relative;
+	top: 222px;
+}
+
+.title .home {
+	position: relative;
+	width: fit-content;
+}
+
+.title .icon {
+	height: 18px;
+	position: relative;
+	width: 18px;
+}
+
+.title .text__wrapper {
+	margin-top: -1px;
+	position: relative;
+	white-space: nowrap;
+	width: fit-content;
+}
+
+.title .line {
+	height: 1px;
+	bottom: 0;
+	position: absolute;
+	width: 90%;
+}
+
+// BOX
+.box {
+	border: 0px none;
+	padding: 20px 0;
+	position: relative;
+}
+
+.contact__info {
+	height: 291px;
+	display: flex;
+	justify-content: space-around;
+}
+
+.box .div {
+	align-items: center;
+	display: inline-flex;
+	flex-direction: column;
+	gap: 32px;
+	left: 66px;
+	position: relative;
+	top: 55px;
+}
+
+.icon__img {
+	height: 32px;
+	left: 18px;
+	position: absolute;
+	top: 17px;
+	width: 32px;
+}
+
+.div__2 {
+	align-items: center;
+	display: inline-flex;
+	flex-direction: column;
+	gap: 8px;
+	margin-top: 32px;
+	width: 100%;
+}
+
+.box .text__wrapper {
+	-webkit-background-clip: text !important;
+	-webkit-text-fill-color: transparent;
+	background: linear-gradient(180deg, rgb(12.12, 185.88, 240.76) 0%, rgb(233.05, 92.08, 233.05) 100%);
+	background-clip: text;
+	color: transparent;
+	margin-top: -1px;
+	position: relative;
+	text-fill-color: transparent;
+	width: fit-content;
+}
+
+.box .text__wrapper_2 {
+	position: relative;
+	text-align: center;
+	width: 248px;
+}
+
+.phone,
+.address,
+.email {
+	background-color: #25253199;
+	height: 291px;
+	width: 30%;
+	border-image: linear-gradient(to bottom, rgb(255, 255, 255), rgba(255, 255, 255, 0)) 1;
+	border: 1px solid;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+
+.location {
+	height: 32px;
+	left: 17px;
+	position: absolute;
+	top: 17px;
+	width: 32px;
+}
+.calling__wrapper {
+	background-image: url("../../images/Contact/EllipseContact.svg");
+}
+.location__wrapper {
+	background-image: url("../../images/Contact/EllipseContact.svg");
+}
+.message__wrapper {
+	background-image: url("../../images/Contact/EllipseContact.svg");
+}
+
+.location__wrapper,
+.message__wrapper,
+.calling__wrapper {
+	background-size: 100% 100%;
+	height: 65px;
+	width: 65px;
+	position: relative;
+}

@@ -3,12 +3,12 @@ import { Link } from "react-router-dom";
 
 import s from "./index.module.scss";
 
-const Products = ({ title, style = {}, products = [], amount }) => {
+const Products = ({ title,  products = [], amount }) => {
 
 	const list = products.filter((_, i) => i < amount);
 
 	return (
-		<div className={s.products} style={style}>
+		<div className={s.products} >
 			{title && <h2 className={s.title}>{title}</h2>}
 			<div className={s.list}>
 				{list.map(({ id, images, title, category: { name: cat } }) => (

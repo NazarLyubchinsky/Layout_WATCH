@@ -1,6 +1,6 @@
 import React from 'react'
 import { useDispatch, useSelector } from 'react-redux';
-// import { removeItemToFavorite } from '../../features/user/userSlice';
+import { removeItemToFavorite } from '../../features/user/userSlice';
 
 import s from "./Favorite.module.scss";
 import heart from '../../images/heart.svg'
@@ -8,9 +8,9 @@ const Favorite = () => {
 	const dispatch = useDispatch();
 	const { favorite } = useSelector(({ user }) => user);
 
-	// const removeItem = (id) => {
-	// 	dispatch(removeItemToFavorite(id));
-	// };
+	const removeItem = (id) => {
+		dispatch(removeItemToFavorite(id));
+	};
 
 	return (
 		<section className={s.favorit}>
@@ -22,7 +22,7 @@ const Favorite = () => {
 				<>
 					<div className={s.list}>
 						{favorite.map((item) => {
-							const { title, category, images,  id } = item;
+							const { title, category, images, id } = item;
 							return (
 								<div className={s.list} key={id}>
 									<div className={s.product}>
@@ -35,7 +35,7 @@ const Favorite = () => {
 															<div className={s.div}>{category.name}</div>
 														</div>
 
-														<div className={s.frame}>
+														<div className={s.frame} 	onClick={() => removeItem(item.id)}>
 															<img className={s.heart} alt="Heart" src={heart} />
 														</div>
 

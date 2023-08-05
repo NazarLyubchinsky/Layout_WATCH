@@ -4,7 +4,7 @@ import s from './index.module.scss'
 import { useDispatch, useSelector } from 'react-redux';
 import { toggleForm } from '../../features/user/userSlice'
 import { ROUTES } from '../../utils/routes'
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 import AVATAR from '../../images/avatar.jpg'
 import SEARCH from '../../images/search (1).svg';
@@ -18,7 +18,7 @@ const Header = () => {
 
 	const [values, setValues] = useState({
 		name: "Guest",
-		//  avatar: AVATAR
+		avatar: AVATAR
 	});
 
 	useEffect(() => {
@@ -38,7 +38,11 @@ const Header = () => {
 				<ul className={s.list}>
 					<li className={s.item}>Movies</li>
 					<li className={s.item}>Series</li>
-					<li className={s.item}>Documentaries</li>
+					<li className={s.item}>
+						<Link to={ROUTES.CONTACT}>
+							Contact Us
+						</Link>
+					</li>
 				</ul>
 
 				<div className={s.rigth}>
@@ -52,10 +56,10 @@ const Header = () => {
 					</div>
 					<div className={s.user} onClick={handleClick}>
 						<div className={s.avatar}
-							style={{
-								backgroundImage: `url(${AVATAR})`,
-							}}
-						// style={{ backgroundImage: `url(${values.avatar})` }}
+							// style={{
+							// 	backgroundImage: `url(${AVATAR})`,
+							// }}
+							style={{ backgroundImage: `url(${values.avatar})` }}
 						/>
 						<div className={s.username}>{values.name}</div>
 					</div>

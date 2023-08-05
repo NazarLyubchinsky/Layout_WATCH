@@ -112,12 +112,17 @@
 }
 
 .frame {
+	cursor: pointer;
 	background: linear-gradient(180deg, rgb(255, 255, 255) 0%, rgba(255, 255, 255, 0) 100%);
 	background-color: rgb(255, 205, 255);
 	min-height: 32px;
 	min-width: 32px;
 	display: flex;
 	justify-content: center;
+	transition: opacity .2s ease-in;
+	&:hover {
+		opacity: 0.8;
+	}
 }
 
 .frame .heart {
