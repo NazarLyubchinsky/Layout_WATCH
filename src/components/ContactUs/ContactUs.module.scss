@@ -34,6 +34,10 @@
 .title .home {
 	position: relative;
 	width: fit-content;
+	transition: opacity .2s ease-in;
+	&:hover{
+		opacity: 0.6;
+	}
 }
 
 .title .icon {
@@ -61,6 +65,7 @@
 	border: 0px none;
 	padding: 20px 0;
 	position: relative;
+	margin-top: 40px;
 }
 
 .contact__info {

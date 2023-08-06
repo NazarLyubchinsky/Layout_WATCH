@@ -10,7 +10,7 @@ import Preloader from '../Preloader/Preloader';
 
 
 const Sidebar = () => {
-	const { list, isLoading } = useSelector((state) => state.categories);
+	const { list } = useSelector((state) => state.categories);
 	const dispatch = useDispatch();
 
 	const limit = 5;

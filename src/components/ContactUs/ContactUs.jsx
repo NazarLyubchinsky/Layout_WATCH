@@ -7,6 +7,8 @@ import Calling from '../../images/Contact/Calling.svg'
 import Location from '../../images/Contact/Location (1).svg'
 import Message from '../../images/Contact/Message.svg'
 import SendMessage from './SendMessage/SendMessage'
+import { Link } from 'react-router-dom'
+import { ROUTES } from '../../utils/routes'
 const ContactUs = () => {
 	return (
 		<section className={s.contact}>
@@ -15,7 +17,7 @@ const ContactUs = () => {
 					<div className={s.overlap__group}>
 						<div className={s.about__us}>Contact Us</div>
 						<div className={s.div}>
-							<div className={s.home}>Home</div>
+							<Link to={ROUTES.HOME} className={s.home}>Home</Link>
 							<img className={s.icon} alt={Icon} src={Icon} />
 							<div className={s.text__wrapper}>Contact Us</div>
 						</div>

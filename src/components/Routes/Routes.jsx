@@ -5,7 +5,6 @@ import { ROUTES } from '../../utils/routes';
 import UserForm from '../Auth'
 import SingleCategory from '../Categories/SingleCategory';
 import ContactUs from '../ContactUs/ContactUs';
-import ContsctUs from '../ContactUs/ContactUs';
 import Favorite from '../Favorite/Favorite';
 import Home from '../Home/Home';
 import SingleProduct from '../Products/SingleProduct';
