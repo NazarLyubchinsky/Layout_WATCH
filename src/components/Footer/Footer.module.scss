@@ -1,0 +1,27 @@
+.footer {
+	display: flex;
+	padding: 24px;
+	position: relative;
+	justify-content: space-between;
+	align-items: center;
+	bottom: 0;
+	background-color: #191817;
+}
+.social {
+	margin-top: 20px;
+	display: flex;
+	gap: 15px;
+}
+
+.list {
+	display: flex;
+	gap: 24px;
+}
+
+.item {
+	cursor: pointer;
+	transition: opacity 0.2s ease-in;
+	&:hover {
+		opacity: 0.6;
+	}
+}

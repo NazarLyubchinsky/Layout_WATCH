@@ -1,4 +1,5 @@
 import UserForm from "../Auth";
+import Footer from "../Footer/Footer";
 import Header from "../Header";
 import AppRoutes from "../Routes/Routes";
 import Sidebar from "../Sidebar/Sidebar";
@@ -12,6 +13,7 @@ function App() {
 				<AppRoutes />
 			</div>
 		</div>
+				<Footer />
 		<UserForm />
 
 

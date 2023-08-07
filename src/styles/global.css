@@ -90,10 +90,10 @@ li {
 	flex-wrap: wrap;
 	/* gap: 20px; */
 }
-.wrapper{
-/* flex-grow: 1; */
-margin-left: 274px;
-width: 100%;
+.wrapper {
+	/* flex-grow: 1; */
+	margin-left: 274px;
+	width: 100%;
 }
 
 section {

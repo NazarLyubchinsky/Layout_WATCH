@@ -36,8 +36,16 @@ const Header = () => {
 		<section className={s.section}>
 			<div className={s.header}>
 				<ul className={s.list}>
-					<li className={s.item}>Movies</li>
-					<li className={s.item}>Series</li>
+					<li className={s.item}>
+					<Link to={ROUTES.PRIVACYPOLICY}>
+					Privacy Policy
+						</Link>
+					</li>
+					<li className={s.item}>
+						<Link to={ROUTES.FAQ}>
+							FAQ
+						</Link>
+					</li>
 					<li className={s.item}>
 						<Link to={ROUTES.CONTACT}>
 							Contact Us
@@ -56,9 +64,6 @@ const Header = () => {
 					</div>
 					<div className={s.user} onClick={handleClick}>
 						<div className={s.avatar}
-							// style={{
-							// 	backgroundImage: `url(${AVATAR})`,
-							// }}
 							style={{ backgroundImage: `url(${values.avatar})` }}
 						/>
 						<div className={s.username}>{values.name}</div>

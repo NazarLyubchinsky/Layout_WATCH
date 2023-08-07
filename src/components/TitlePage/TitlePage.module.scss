@@ -1,0 +1,58 @@
+
+.title {
+	position: relative;
+	display: flex;
+	justify-content: center;
+}
+
+.title .overlap__group {
+	background-image: url("../../images/Contact/EllipseContact.png");
+	background-size: 100% 100%;
+	height: 367px;
+	width: 690px;
+}
+
+.title .about__us {
+	position: relative;
+	text-align: center;
+	top: 110px;
+	font-size: 54px;
+}
+
+.title .div {
+	display: flex;
+	justify-content: center;
+	gap: 4px;
+	position: relative;
+	top: 222px;
+	align-items: center;
+}
+
+.title .home {
+	position: relative;
+	width: fit-content;
+	transition: opacity 0.2s ease-in;
+	&:hover {
+		opacity: 0.6;
+	}
+}
+
+.title .icon {
+	height: 18px;
+	position: relative;
+	width: 18px;
+}
+
+.title .text__wrapper {
+	margin-top: -1px;
+	position: relative;
+	white-space: nowrap;
+	width: fit-content;
+}
+
+.title .line {
+	height: 1px;
+	bottom: 0;
+	position: absolute;
+	width: 90%;
+}

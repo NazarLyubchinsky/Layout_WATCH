@@ -17,7 +17,9 @@ const Favorite = () => {
 			<h2 className={s.favorite__title} >Your favorite</h2>
 
 			{!favorite.length ? (
-				<div className={s.empty}>Here is empty</div>
+				<div style={{
+					padding: '100px'
+				}} className={s.empty}>Here is empty</div>
 			) : (
 				<>
 					<div className={s.list}>
@@ -35,7 +37,7 @@ const Favorite = () => {
 															<div className={s.div}>{category.name}</div>
 														</div>
 
-														<div className={s.frame} 	onClick={() => removeItem(item.id)}>
+														<div className={s.frame} onClick={() => removeItem(item.id)}>
 															<img className={s.heart} alt="Heart" src={heart} />
 														</div>
 
