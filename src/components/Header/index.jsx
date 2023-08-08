@@ -9,6 +9,7 @@ import { Link, useNavigate } from 'react-router-dom';
 import AVATAR from '../../images/avatar.jpg'
 import SEARCH from '../../images/search (1).svg';
 import BELL from '../../images/bell.svg'
+import BurgerModal from './BurgerModal/BurgerModal';
 
 const Header = () => {
 	const dispath = useDispatch();
@@ -35,10 +36,11 @@ const Header = () => {
 	return (
 		<section className={s.section}>
 			<div className={s.header}>
+				<BurgerModal />
 				<ul className={s.list}>
 					<li className={s.item}>
-					<Link to={ROUTES.PRIVACYPOLICY}>
-					Privacy Policy
+						<Link to={ROUTES.PRIVACYPOLICY}>
+							Privacy Policy
 						</Link>
 					</li>
 					<li className={s.item}>

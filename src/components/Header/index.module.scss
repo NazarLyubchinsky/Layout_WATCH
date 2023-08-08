@@ -73,3 +73,16 @@
 	background-size: cover;
 	border: 0px none;
 }
+@media only screen and (max-width: 1200px) {
+	.header {
+		padding: 30px 26px 0 26px;
+		background-size: contain;
+	}
+	.section {
+		height: 350px;
+	}
+}
+@media only screen and (max-width: 992px) {
+
+
+}
