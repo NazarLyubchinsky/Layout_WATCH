@@ -4,7 +4,10 @@ import s from './BurgerModal.module.scss'
 import { useSelector } from "react-redux";
 import { Link, NavLink } from "react-router-dom";
 import MenuIcon from '@mui/icons-material/Menu';
-// import { ROUTES } from '../../../utils/routes';
+import { ROUTES } from '../../../utils/routes';
+import NavigateList from '../NavigateList/NavigateList';
+
+import favoriteImg from '../../../images/heart (1).svg'
 
 const BurgerModal = () => {
 	const [isModalOpen, setIsModalOpen] = useState(false);
@@ -18,6 +21,7 @@ const BurgerModal = () => {
 	const closeModal = () => {
 		setIsModalOpen(false);
 	};
+
 	return (
 		<>
 			<div className={s.modal_button_container}>
@@ -50,13 +54,16 @@ const BurgerModal = () => {
 											</li>
 										))}
 									</ul>
-									{/* <ul className={s.user}>
+									<NavigateList styleProp='list__modal' styleLink='link' />
+
+
+									<ul className={s.user}>
 										<li className={s.account}>
 											<Link to={ROUTES.FAVORITE} className={s.favourites}>
-												<span className={s.favorite}><img src={favoriteImg} alt={favoriteImg} />	Favourites</span>
+												<span className={s.favorite}><img src={favoriteImg} alt={favoriteImg} />Favourites</span>
 											</Link>
 										</li>
-									</ul> */}
+									</ul>
 								</nav>
 							</section >
 

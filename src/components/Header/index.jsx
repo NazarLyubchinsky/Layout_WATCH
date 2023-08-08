@@ -4,12 +4,12 @@ import s from './index.module.scss'
 import { useDispatch, useSelector } from 'react-redux';
 import { toggleForm } from '../../features/user/userSlice'
 import { ROUTES } from '../../utils/routes'
-import { Link, useNavigate } from 'react-router-dom';
+import {  useNavigate } from 'react-router-dom';
 
 import AVATAR from '../../images/avatar.jpg'
 import SEARCH from '../../images/search (1).svg';
-import BELL from '../../images/bell.svg'
 import BurgerModal from './BurgerModal/BurgerModal';
+import NavigateList from './NavigateList/NavigateList';
 
 const Header = () => {
 	const dispath = useDispatch();
@@ -36,39 +36,24 @@ const Header = () => {
 	return (
 		<section className={s.section}>
 			<div className={s.header}>
-				<BurgerModal />
-				<ul className={s.list}>
-					<li className={s.item}>
-						<Link to={ROUTES.PRIVACYPOLICY}>
-							Privacy Policy
-						</Link>
-					</li>
-					<li className={s.item}>
-						<Link to={ROUTES.FAQ}>
-							FAQ
-						</Link>
-					</li>
-					<li className={s.item}>
-						<Link to={ROUTES.CONTACT}>
-							Contact Us
-						</Link>
-					</li>
-				</ul>
+				<div className={s.header__wrapper}>
+					<BurgerModal />
 
-				<div className={s.rigth}>
-					<div className={s.search}>
-						<div className={s.overlap__group}>
-							<img className="img" alt="Vector" src={SEARCH} />
+					<NavigateList />
+
+					<div className={s.rigth}>
+						<div className={s.search}>
+							<div className={s.overlap__group}>
+								<img className="img" alt="Vector" src={SEARCH} />
+							</div>
 						</div>
-					</div>
-					<div className={s.bell}>
-						<img className="img" alt="Vector" src={BELL} />
-					</div>
-					<div className={s.user} onClick={handleClick}>
-						<div className={s.avatar}
-							style={{ backgroundImage: `url(${values.avatar})` }}
-						/>
-						<div className={s.username}>{values.name}</div>
+					
+						<div className={s.user} onClick={handleClick}>
+							<div className={s.avatar}
+								style={{ backgroundImage: `url(${values.avatar})` }}
+							/>
+							<div className={s.username}>{values.name}</div>
+						</div>
 					</div>
 				</div>
 			</div>

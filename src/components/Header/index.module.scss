@@ -2,18 +2,16 @@
 	height: 380px;
 }
 .header {
-	display: flex;
 	background-image: url("../../images/header_img.png");
 	background-size: cover;
 	background-repeat: no-repeat;
-	align-items: flex-start;
-	justify-content: space-between;
 	height: 100%;
 	padding: 47px 42px 0 32px;
 }
-.list {
+.header__wrapper {
+	justify-content: space-between;
 	display: flex;
-	gap: 32px;
+	align-items: center;
 }
 
 .search {
@@ -55,8 +53,7 @@
 }
 .user,
 .bell,
-.search,
-.item {
+.search {
 	cursor: pointer;
 	transition: opacity 0.2s ease-in;
 	&:hover {
@@ -76,13 +73,41 @@
 @media only screen and (max-width: 1200px) {
 	.header {
 		padding: 30px 26px 0 26px;
-		background-size: contain;
 	}
 	.section {
 		height: 350px;
 	}
 }
 @media only screen and (max-width: 992px) {
-
-
+	.header {
+		background-size: cover;
+	}
+	.section {
+		height: 250px;
+	}
+}
+@media only screen and (max-width: 768px) {
+	.rigth {
+		gap: 40px;
+	}
+	.header {
+		padding: 15px 10px 0 10px;
+	}
+	.section {
+		height: 200px;
+	}
+}
+@media only screen and (max-width: 576px) {
+	.section {
+		height: 150px;
+	}
+	.rigth {
+		gap: 15px;
+	}
+}
+@media only screen and (max-width: 400px) {
+	.section {
+		height: 120px;
+	}
+	
 }

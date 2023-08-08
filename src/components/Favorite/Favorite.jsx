@@ -26,9 +26,9 @@ const Favorite = () => {
 						{favorite.map((item) => {
 							const { title, category, images, id } = item;
 							return (
-								<div className={s.list} key={id}>
+								<div className={s.item} key={id}>
 									<div className={s.product}>
-										<div className={s.item} >
+										<div className={s.product__item} >
 											<div className={s.box}>
 												<div className={s.group}>
 													<div className={s.overlap__group} style={{ backgroundImage: `url(${images[0]})`, }}>

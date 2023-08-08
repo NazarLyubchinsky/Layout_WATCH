@@ -17,6 +17,19 @@
 	display: flex;
 	gap: 20px;
 	flex-wrap: wrap;
+
+}
+.item{
+	width: calc(100% / 4 - 15px);
+	@media only screen and (max-width: 1300px) {
+		width: calc(100% / 3 - 14px);
+	}
+	@media only screen and (max-width: 1100px) {
+		width: calc(100% / 2 - 10px);
+	}
+	@media only screen and (max-width: 576px) {
+		width: 100%;
+	}
 }
 .product {
 	background: var(--bg);
@@ -34,12 +47,10 @@
 .box {
 	border: 0px none;
 	height: 301px;
-	width: 255px;
 }
 
 .box .group {
 	height: 301px;
-	width: 259px;
 }
 
 .box .overlap__group {
@@ -49,7 +60,6 @@
 	left: -1px;
 	position: relative;
 	top: -1px;
-	width: 257px;
 }
 
 .box .overlap {
@@ -61,7 +71,7 @@
 	left: 1px;
 	position: absolute;
 	top: 216px;
-	width: 255px;
+	width: 100%;
 }
 
 .box .text__wrapper {
@@ -102,13 +112,14 @@
 	position: absolute;
 	top: 20px;
 }
-.box .frame {
+ .frame {
 	height: 33px;
-	left: 202px;
+	right: 11px;
 	position: absolute;
-	top: 19px;
+	top: 11px;
 	width: 33px;
 	border-radius: 30%;
+
 }
 
 .frame {
@@ -119,7 +130,7 @@
 	min-width: 32px;
 	display: flex;
 	justify-content: center;
-	transition: opacity .2s ease-in;
+	transition: opacity 0.2s ease-in;
 	&:hover {
 		opacity: 0.8;
 	}
@@ -127,4 +138,8 @@
 
 .frame .heart {
 	width: 20px;
+}
+.empty{
+	display: flex;
+	justify-content: center;
 }

@@ -110,11 +110,11 @@ const SendMessage = () => {
 											<img className="big__image" alt="big__image" src={bigImage} />
 										</div>
 									</div>
-								</div>
-								<div className="logo-fb-simple-wrapper"></div>
-							</div>
 							<div className="logo-instagram-wrapper"></div>
+								<div className="logo-fb-simple-wrapper"></div>
 							<div className="logo-telegram-wrapper"></div>
+								</div>
+							</div>
 						</div>
 					</div>
 				</div>

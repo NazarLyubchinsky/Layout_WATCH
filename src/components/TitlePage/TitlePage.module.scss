@@ -1,22 +1,31 @@
-
 .title {
 	position: relative;
 	display: flex;
 	justify-content: center;
 }
 
-.title .overlap__group {
+.overlap__group {
 	background-image: url("../../images/Contact/EllipseContact.png");
 	background-size: 100% 100%;
 	height: 367px;
 	width: 690px;
+	@media only screen and (max-width: 768px) {
+		width: 450px;
+	}
+	@media only screen and (max-width: 768px) {
+		width: 350px;
+	}
+
 }
 
-.title .about__us {
+.about__us {
 	position: relative;
 	text-align: center;
 	top: 110px;
 	font-size: 54px;
+	@media only screen and (max-width: 768px) {
+		font-size: 45px;
+	}
 }
 
 .title .div {

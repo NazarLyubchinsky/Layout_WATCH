@@ -7,6 +7,9 @@
 	position: absolute;
 	top: 49px;
 	width: 647px;
+	@media only screen and (max-width: 1400px) {
+		z-index: 99;
+	}
 }
 
 .form__text {
@@ -127,7 +130,9 @@
 
 .textarea__message {
 	width: 100%;
+	max-width: 645px;
 	height: 100%;
+	max-height: 160px;
 	background-color: rgba(37, 37, 49, 0.6);
 	border-radius: 4px;
 	border: none;
@@ -155,6 +160,10 @@
 	position: absolute;
 	top: 50px;
 	width: 350px;
+	@media only screen and (max-width: 1400px) {
+		opacity: 0.4;
+		z-index: 1;
+	}
 }
 
 // Ellipse
@@ -218,13 +227,13 @@
 // Logo
 .logo-fb-simple-wrapper {
 	background-image: url("../../../images/Contact/SendMessage/instagram.svg");
-	left: 6px;
-	top: 220px;
+	left: -32px;
+	top: 222px;
 }
 .logo-telegram-wrapper {
 	background-image: url("../../../images/Contact/SendMessage/gitHub.svg");
-	left: 312px;
-	top: 243px;
+	left: 260px;
+	top: 223px;
 }
 .logo-github-wrapper {
 	background-image: url("../../../images/Contact/SendMessage/twitterContact.svg");
@@ -233,8 +242,8 @@
 }
 .logo-instagram-wrapper {
 	background-image: url("../../../images/Contact/SendMessage/facebook.svg");
-	left: 147px;
-	top: 324px;
+	left: 115px;
+	top: 301px;
 }
 .logo-fb-simple-wrapper,
 .logo-instagram-wrapper,
@@ -275,3 +284,5 @@
 	top: 12px;
 	width: 21px;
 }
+
+

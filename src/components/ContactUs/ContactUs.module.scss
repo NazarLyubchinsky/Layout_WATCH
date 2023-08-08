@@ -34,8 +34,8 @@
 .title .home {
 	position: relative;
 	width: fit-content;
-	transition: opacity .2s ease-in;
-	&:hover{
+	transition: opacity 0.2s ease-in;
+	&:hover {
 		opacity: 0.6;
 	}
 }
@@ -157,4 +157,19 @@
 	height: 65px;
 	width: 65px;
 	position: relative;
+}
+
+@media only screen and (max-width: 768px) {
+	.contact__info {
+		flex-direction: column;
+		align-items: center;
+		gap: 24px;
+		height: auto;
+	}
+	.phone,
+	.address,
+	.email {
+		width: 90%;
+		height: 240px;
+	}
 }

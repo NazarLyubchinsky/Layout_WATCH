@@ -8,7 +8,6 @@
 	background-color: #191817;
 }
 .social {
-	margin-top: 20px;
 	display: flex;
 	gap: 15px;
 }
@@ -23,5 +22,18 @@
 	transition: opacity 0.2s ease-in;
 	&:hover {
 		opacity: 0.6;
+	}
+}
+
+@media only screen and (max-width: 768px) {
+	.footer {
+		flex-direction: column;
+		gap: 30px;
+	}
+}
+@media only screen and (max-width: 400px) {
+	.list {
+		flex-direction: column;
+		align-items: center;
 	}
 }

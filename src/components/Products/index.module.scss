@@ -24,6 +24,7 @@ Products
 	background: var(--bg);
 	border-radius: 20px;
 	overflow: hidden;
+	width: calc(100% / 4 - 16px);
 }
 .image {
 	width: 100%;
@@ -36,12 +37,10 @@ Products
 .box {
 	border: 0px none;
 	height: 301px;
-	width: 255px;
 }
 
 .box .group {
 	height: 301px;
-	width: 259px;
 }
 
 .box .overlap__group {
@@ -51,7 +50,6 @@ Products
 	left: -1px;
 	position: relative;
 	top: -1px;
-	width: 257px;
 }
 
 .box .overlap {
@@ -63,7 +61,7 @@ Products
 	left: 1px;
 	position: absolute;
 	top: 216px;
-	width: 255px;
+	width: 100%;
 }
 
 .box .text__wrapper {
@@ -105,6 +103,32 @@ Products
 	top: 20px;
 }
 
+@media only screen and (max-width: 1300px) {
+	.product {
+		width: calc(100% / 3 - 14px);
+	}
+}
+@media only screen and (max-width: 1100px) {
+	.product {
+		width: calc(100% / 2 - 10px);
+	}
+}
+@media only screen and (max-width: 992px) {
+	.product {
+		width: calc(100% / 3 - 14px);
+	}
+}
+@media only screen and (max-width: 768px) {
+	.product {
+		width: calc(100% / 2 - 10px);
+	}
+}
+@media only screen and (max-width: 576px) {
+	.product {
+		width: 100%;
+	}
+}
+
 /*
 Product
 */
@@ -124,6 +148,7 @@ Product
 	background-repeat: no-repeat;
 	background-size: cover;
 	height: 430px;
+	border-radius: 25px;
 }
 .info {
 	width: 70%;
@@ -142,6 +167,21 @@ Product
 		.title {
 			font-size: 32px;
 			font-weight: 600;
+			@media only screen and (max-width: 1300px) {
+				& {
+					font-size: 26px;
+				}
+			}
+			@media only screen and (max-width: 1100px) {
+				& {
+					font-size: 23px;
+				}
+			}
+			@media only screen and (max-width: 400px) {
+				& {
+					font-size: 20px;
+				}
+			}
 		}
 		.description {
 			font-size: 16px;
@@ -172,4 +212,51 @@ Product
 	background-color: green;
 	padding: 20px;
 	border-radius: 10px;
+}
+
+@media only screen and (max-width: 768px) {
+	.product__card {
+		flex-direction: column;
+	}
+	.images {
+		width: 100%;
+	}
+	.info {
+		width: 100%;
+		padding-left: 0;
+		padding: 20px 15px;
+		background: var(--bg);
+		border-radius: 0 0 25px 25px;
+	}
+	.current {
+		border-radius: 25px 25px 0 0;
+	}
+	.info__text {
+		gap: 15px;
+	}
+}
+@media only screen and (max-width: 500px) {
+	.product__card {
+		padding: 20px 5px;
+	}
+	.current{
+		height: 320px;
+	}
+}
+@media only screen and (max-width: 400px) {
+	.product__card {
+		position: relative;
+	}
+	.purchase {
+		position: absolute;
+		top: 33px;
+		color: #000000;
+	}
+	.favourite {
+		width: 100%;
+	}
+	.return {
+		width: 100%;
+		text-align: center;
+	}
 }

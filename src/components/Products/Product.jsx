@@ -107,7 +107,7 @@ const Product = (item) => {
 			<div className={s.images}>
 				<div
 					className={s.current}
-					style={{ backgroundImage: `url(${images[0]})`, borderRadius: '25px' }}
+					style={{ backgroundImage: `url(${images[0]})` }}
 				/>
 			</div>
 			<div className={s.info}>
