@@ -1,8 +1,6 @@
 import React from 'react'
 import s from './ContactUs.module.scss'
 
-import Icon from '../../images/Contact/IconContact.svg'
-import Line from '../../images/Contact/LineContact.png'
 import Calling from '../../images/Contact/Calling.svg'
 import Location from '../../images/Contact/Location (1).svg'
 import Message from '../../images/Contact/Message.svg'
