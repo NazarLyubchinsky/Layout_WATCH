@@ -3,6 +3,7 @@ Products
 */
 
 .products {
+	background: var(--dark);
 	padding: 0 22px 20px 22px;
 }
 .title {
@@ -108,9 +109,13 @@ Products
 Product
 */
 .product__card {
-	background: var(--bg);
+	background: var(--dark);
 	display: flex;
 	padding: 40px 22px 0 22px;
+}
+.favourite:disabled {
+	cursor: not-allowed;
+	background: var(--bg);
 }
 .images {
 	width: 70%;
@@ -158,6 +163,7 @@ Product
 		}
 	}
 }
+
 .mess {
 	position: fixed;
 	z-index: 99;
