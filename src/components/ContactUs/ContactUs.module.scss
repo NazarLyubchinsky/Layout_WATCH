@@ -109,7 +109,6 @@
 	color: transparent;
 	margin-top: -1px;
 	position: relative;
-	text-fill-color: transparent;
 	width: fit-content;
 }
 
@@ -169,7 +168,7 @@
 	.phone,
 	.address,
 	.email {
-		width: 90%;
+		width: 100%;
 		height: 240px;
 	}
 }

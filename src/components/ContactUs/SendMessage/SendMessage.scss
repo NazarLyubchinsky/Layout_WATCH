@@ -10,6 +10,19 @@
 	@media only screen and (max-width: 1400px) {
 		z-index: 99;
 	}
+	@media only screen and (max-width: 768px) {
+		left: 0;
+		width: 100%;
+		padding: 0 20px;
+		padding-bottom: 20px;
+		position: unset;
+	}
+}
+.form__wrapper {
+	@media only screen and (max-width: 768px) {
+		position: relative;
+		z-index: 99;
+	}
 }
 
 .form__text {
@@ -20,6 +33,10 @@
 	left: 0;
 	position: absolute;
 	top: 0;
+	@media only screen and (max-width: 768px) {
+		width: 100%;
+		position: initial;
+	}
 }
 
 .text-wrapper {
@@ -44,13 +61,42 @@
 	position: absolute;
 	top: 106px;
 	width: 645px;
+	@media only screen and (max-width: 768px) {
+		width: 100%;
+		position: initial;
+	}
 }
 // Field
+.field {
+	display: flex;
+	flex-wrap: wrap;
+	margin-top: 20px;
+	gap: 20px;
+	@media only screen and (max-width: 768px) {
+		gap: 28px;
+		flex-direction: column;
+	}
+}
+.field__input {
+	@media only screen and (max-width: 768px) {
+		display: flex;
+		gap: 20px;
+		flex-wrap: wrap;
+		width: 100%;
+	}
+}
 .field__name,
 .field__lstname,
 .field__email,
 .field__number {
 	position: absolute;
+	@media only screen and (max-width: 768px) {
+		width: calc(100% / 2 - 10px);
+		position: inherit;
+	}
+	@media only screen and (max-width: 700px) {
+		width: 100%;
+	}
 }
 
 .field__name {
@@ -76,6 +122,10 @@
 	position: absolute;
 	top: 370px;
 	width: 647px;
+	@media only screen and (max-width: 768px) {
+		width: 100%;
+		position: unset;
+	}
 }
 
 // Overlap group
@@ -96,6 +146,10 @@
 		border: 3px solid;
 		border-color: rgba(#25253169, 1);
 	}
+	@media only screen and (max-width: 768px) {
+		width: 100%;
+		position: relative;
+	}
 }
 
 .overlap-group-2 {
@@ -108,18 +162,28 @@
 .overlap {
 	height: 686px;
 	position: relative;
-	// width: 1288px;
+	@media only screen and (max-width: 768px) {
+		height: 100%;
+	}
 }
 .overlap-2 {
 	height: 137px;
 	position: relative;
 	width: 645px;
+	@media only screen and (max-width: 768px) {
+		width: 100%;
+		position: unset;
+	}
 }
 
 .overlap-3 {
 	left: 0;
 	position: absolute;
 	top: 22px;
+	@media only screen and (max-width: 450px) {
+		left: -6px;
+		top: 14px;
+	}
 }
 
 .overlap-4 {
@@ -139,8 +203,18 @@
 	color: #ffff;
 	padding-left: 10px;
 	padding-top: 10px;
+	@media only screen and (max-width: 768px) {
+		width: 100%;
+		max-width: unset;
+	}
 }
-
+.send__button {
+	@media only screen and (max-width: 768px) {
+		display: flex;
+		justify-content: end;
+		width: 100%;
+	}
+}
 .send-message {
 	align-items: flex-start;
 	background: linear-gradient(180deg, rgb(12.12, 185.88, 240.76) 0%, rgb(233.05, 92.08, 233.05) 100%);
@@ -149,6 +223,9 @@
 	padding: 18px 38px;
 	position: absolute;
 	top: 539px;
+	@media only screen and (max-width: 768px) {
+		position: unset;
+	}
 }
 
 .image {
@@ -164,6 +241,18 @@
 		opacity: 0.4;
 		z-index: 1;
 	}
+	@media only screen and (max-width: 768px) {
+		opacity: 0.3;
+	}
+	@media only screen and (max-width: 450px) {
+		width: 270px;
+		height: 270px;
+		top: 150px;
+		opacity: 0.1;
+	}
+	@media only screen and (max-width: 360px) {
+		display: none;
+	}
 }
 
 // Ellipse
@@ -173,6 +262,10 @@
 	left: 2px;
 	top: 21px;
 	width: 270px;
+	@media only screen and (max-width: 450px) {
+		height: 200px;
+		width: 200px;
+	}
 }
 .ellipse-2 {
 	border-radius: 225.5px/226px;
@@ -180,6 +273,10 @@
 	left: 37px;
 	top: 58px;
 	width: 200px;
+	@media only screen and (max-width: 450px) {
+		height: 140px;
+		width: 140px;
+	}
 }
 .ellipse,
 .ellipse-2 {
@@ -205,6 +302,12 @@
 	position: absolute;
 	top: 7px;
 	width: 200px;
+	@media only screen and (max-width: 450px) {
+		height: 150px;
+		width: 150px;
+		top: 18px;
+		left: 129px;
+	}
 }
 
 .element {
@@ -229,21 +332,37 @@
 	background-image: url("../../../images/Contact/SendMessage/instagram.svg");
 	left: -32px;
 	top: 222px;
+	@media only screen and (max-width: 450px) {
+		left: 91px;
+		top: 229px;
+	}
 }
 .logo-telegram-wrapper {
 	background-image: url("../../../images/Contact/SendMessage/gitHub.svg");
 	left: 260px;
 	top: 223px;
+	@media only screen and (max-width: 450px) {
+		left: -5px;
+		top: 203px;
+	}
 }
 .logo-github-wrapper {
 	background-image: url("../../../images/Contact/SendMessage/twitterContact.svg");
 	left: 287px;
 	top: 92px;
+	@media only screen and (max-width: 450px) {
+		left: 215px;
+		top: 92px;
+	}
 }
 .logo-instagram-wrapper {
 	background-image: url("../../../images/Contact/SendMessage/facebook.svg");
 	left: 115px;
 	top: 301px;
+	@media only screen and (max-width: 450px) {
+		left: 178px;
+		top: 193px;
+	}
 }
 .logo-fb-simple-wrapper,
 .logo-instagram-wrapper,
@@ -284,5 +403,3 @@
 	top: 12px;
 	width: 21px;
 }
-
-

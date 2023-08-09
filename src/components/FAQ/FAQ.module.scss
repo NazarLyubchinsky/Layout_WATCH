@@ -2,7 +2,7 @@
 	display: flex;
 	justify-content: center;
 	flex-direction: column;
-	padding-bottom: 24pxd;
+	padding-bottom: 24px;
 }
 // Asked
 
@@ -38,12 +38,27 @@
 
 .text__bottom {
 	font-size: 29px;
+	@media only screen and (max-width: 576px) {
+		font-size: 24px;
+	}
+	@media only screen and (max-width: 400px) {
+		font-size: 19px;
+	}
 }
 
 .info {
 	position: relative;
 	text-align: center;
 	padding: 0 150px;
+	@media only screen and (max-width: 768px) {
+		padding: 0 90px;
+	}
+	@media only screen and (max-width: 576px) {
+		padding: 0 30px;
+	}
+	@media only screen and (max-width: 400px) {
+		padding: 0 5px;
+	}
 }
 
 // Bottom
@@ -60,6 +75,9 @@
 	position: relative;
 	padding: 20px;
 	width: 80%;
+	@media only screen and (max-width: 576px) {
+		width: 95%;
+	}
 }
 
 .bottom__text {
@@ -79,6 +97,9 @@
 	height: 26px;
 	letter-spacing: 0;
 	line-height: normal;
+	@media only screen and (max-width: 400px) {
+		font-size: 15px;
+	}
 }
 
 .bottom__icon {
