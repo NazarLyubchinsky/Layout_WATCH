@@ -20,6 +20,7 @@ const BurgerModal = () => {
 
 	const closeModal = () => {
 		setIsModalOpen(false);
+		
 	};
 
 	return (
@@ -38,7 +39,7 @@ const BurgerModal = () => {
 								<span className={s.close_modal_button} onClick={closeModal}>
 									&times;
 								</span>
-								<Link to='/' className={s.title}>WATCH</Link>
+								<Link to='/' className={s.title} onClick={closeModal}>WATCH</Link>
 								<nav className={s.nav}>
 									<ul className={s.menu}>
 										{list.slice(0, limit).map(({ id, name }) => (
@@ -48,20 +49,25 @@ const BurgerModal = () => {
 														`${s.link} ${isActive ? s.active : ''}`
 													}
 													to={`/categories/${id}`}
+													onClick={closeModal}
 												>
 													{name}
 												</NavLink>
 											</li>
 										))}
 									</ul>
-									<NavigateList styleProp='list__modal' styleLink='link' />
+									<NavigateList styleProp='list__modal' closeModal={closeModal}  />
 
 
 									<ul className={s.user}>
 										<li className={s.account}>
-											<Link to={ROUTES.FAVORITE} className={s.favourites}>
-												<span className={s.favorite}><img src={favoriteImg} alt={favoriteImg} />Favourites</span>
-											</Link>
+											<NavLink to={ROUTES.FAVORITE} className={({ isActive }) =>
+												`${s.favourites} ${isActive ? s.active : ''}`
+											} onClick={closeModal}>
+												<img src={favoriteImg} alt={favoriteImg} />Favourites
+
+												{/* <span className={s.favorite}><img src={favoriteImg} alt={favoriteImg} />Favourites</span> */}
+											</NavLink>
 										</li>
 									</ul>
 								</nav>

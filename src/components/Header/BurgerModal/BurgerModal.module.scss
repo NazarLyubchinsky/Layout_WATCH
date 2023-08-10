@@ -100,14 +100,18 @@
 	gap: 20px;
 }
 
-.favorite,
+.favourites,
 .link {
 	color: var(--dark-sea);
 }
 
-.favorite {
+.favourites {
 	display: flex;
 	align-items: center;
 	gap: 7px;
 	font-size: 20px;
 }
+.favourites.active {
+	color: var(--violet);
+}
+

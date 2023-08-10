@@ -1,26 +1,29 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
+import { NavLink } from 'react-router-dom'
 import { ROUTES } from '../../../utils/routes'
 
 import s from './NavigateList.module.scss'
 
-const NavigateList = ({ styleProp, styleLink }) => {
+const NavigateList = ({ styleProp, closeModal, styleLink }) => {
 	return (
 		<ul className={`${s.list} ${s[styleProp]}`}>
 			<li className={s.item}>
-				<Link className={`${s[styleLink]}`} to={ROUTES.PRIVACYPOLICY}>
+				<NavLink className={({ isActive }) =>
+					`${s[styleLink]} ${s.link} ${isActive ? s.active : ''}`} to={ROUTES.PRIVACYPOLICY} onClick={closeModal}>
 					Privacy Policy
-				</Link>
+				</NavLink>
 			</li>
 			<li className={s.item}>
-				<Link className={`${s[styleLink]}`} to={ROUTES.FAQ}>
+				<NavLink className={({ isActive }) =>
+					`${s[styleLink]} ${s.link} ${isActive ? s.active : ''}`} to={ROUTES.FAQ} onClick={closeModal}>
 					FAQ
-				</Link>
+				</NavLink>
 			</li>
 			<li className={s.item}>
-				<Link className={`${s[styleLink]}`} to={ROUTES.CONTACT}>
+				<NavLink className={({ isActive }) =>
+					`${s[styleLink]} ${s.link} ${isActive ? s.active : ''}`} to={ROUTES.CONTACT} onClick={closeModal}>
 					Contact Us
-				</Link>
+				</NavLink>
 			</li>
 		</ul>
 	)

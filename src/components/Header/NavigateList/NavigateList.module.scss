@@ -26,3 +26,12 @@
 		display: flex;
 	}
 }
+
+.link.active {
+	color: var(--violet);
+}
+
+
+.link__color {
+	color: #fff;
+}
