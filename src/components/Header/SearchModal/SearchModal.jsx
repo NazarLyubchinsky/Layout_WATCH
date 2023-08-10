@@ -17,9 +17,11 @@ const SearchModal = () => {
 
 	const openSearch = () => {
 		setSeatch(true)
+		document.body.style.overflow = 'hidden';
 	}
 	const closeSearch = () => {
 		setSeatch(false);
+		document.body.style.overflow = 'auto';
 
 	};
 	const [searchValue, setSearchValue] = useState("");

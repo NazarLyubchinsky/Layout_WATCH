@@ -10,7 +10,10 @@ const UserForm = () => {
 	const dispatch = useDispatch();
 	const { showForm, formType } = useSelector((state) => state.user);
 
-	const closeForm = () => dispatch(toggleForm(false));
+	const closeForm = () => {
+		dispatch(toggleForm(false));
+
+	};
 	const toggleCurrentFormType = (type) => dispatch(toggleFormType(type));
 
 	return (
@@ -18,12 +21,12 @@ const UserForm = () => {
 		showForm ? (<>
 			<div className={s.overlay} onClick={closeForm} />
 			{formType === 'signup' ? (
-					<Register toggleCurrentFormType={toggleCurrentFormType}
+				<Register toggleCurrentFormType={toggleCurrentFormType}
 					closeForm={closeForm} />
 
 			) : (
 				<Login toggleCurrentFormType={toggleCurrentFormType}
-				closeForm={closeForm} />
+					closeForm={closeForm} />
 			)}
 		</>
 		) : (

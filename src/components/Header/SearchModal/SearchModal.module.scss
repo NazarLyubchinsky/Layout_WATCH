@@ -142,3 +142,8 @@
 		width: 90px;
 	}
 }
+
+
+body.modal_overlay, body.modal_content {
+	overflow: hidden;
+}

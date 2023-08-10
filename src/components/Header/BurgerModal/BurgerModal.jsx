@@ -16,10 +16,12 @@ const BurgerModal = () => {
 
 	const handleButtonClick = () => {
 		setIsModalOpen(true);
+		document.body.style.overflow = 'hidden';
 	};
 
 	const closeModal = () => {
 		setIsModalOpen(false);
+		document.body.style.overflow = 'auto';
 		
 	};
 
