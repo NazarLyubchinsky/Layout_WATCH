@@ -1,11 +1,12 @@
 .footer {
 	display: flex;
 	padding: 24px;
-	position: relative;
+	position: absolute;
 	justify-content: space-between;
 	align-items: center;
 	bottom: 0;
 	background-color: #191817;
+	width: 100%;
 }
 .social {
 	display: flex;
