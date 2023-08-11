@@ -12,7 +12,7 @@ const UserForm = () => {
 
 	const closeForm = () => {
 		dispatch(toggleForm(false));
-
+		document.body.style.overflow = 'auto';
 	};
 	const toggleCurrentFormType = (type) => dispatch(toggleFormType(type));
 

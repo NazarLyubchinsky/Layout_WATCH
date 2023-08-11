@@ -12,8 +12,8 @@ function App() {
 				<Header />
 				<AppRoutes />
 			</div>
-		</div>
 				<Footer />
+		</div>
 		<UserForm />
 
 
