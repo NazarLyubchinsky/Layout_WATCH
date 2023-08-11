@@ -104,8 +104,10 @@ li {
 
 section {
 	background: var(--dark);
-	height: calc(100vh - 350px);
+
 }
+
+
 
 button {
 	background: var(--violet-dark);

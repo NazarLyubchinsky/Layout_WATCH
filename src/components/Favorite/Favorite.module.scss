@@ -1,6 +1,10 @@
 .favorit {
 	padding: 0 20px;
 	padding-bottom: 24px;
+	height: calc(100vh - 380px);
+	@media only screen and (max-width: 992px) {
+		height: calc(100vh - 250px);
+	}
 }
 .favorite__title {
 	padding-top: 20px;

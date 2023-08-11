@@ -5,6 +5,10 @@ Products
 .products {
 	background: var(--dark);
 	padding: 0 22px 20px 22px;
+	height: calc(100vh - 380px);
+	@media only screen and (max-width: 992px) {
+		height: calc(100vh - 250px);
+	}
 }
 .title {
 	text-align: start;
@@ -239,7 +243,7 @@ Product
 	.product__card {
 		padding: 20px 5px;
 	}
-	.current{
+	.current {
 		height: 320px;
 	}
 }
