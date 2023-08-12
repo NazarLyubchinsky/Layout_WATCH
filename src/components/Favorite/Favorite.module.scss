@@ -1,10 +1,6 @@
 .favorit {
 	padding: 0 20px;
 	padding-bottom: 24px;
-	height: calc(100vh - 380px);
-	@media only screen and (max-width: 992px) {
-		height: calc(100vh - 250px);
-	}
 }
 .favorite__title {
 	padding-top: 20px;
@@ -21,9 +17,8 @@
 	display: flex;
 	gap: 20px;
 	flex-wrap: wrap;
-
 }
-.item{
+.item {
 	width: calc(100% / 4 - 15px);
 	@media only screen and (max-width: 1300px) {
 		width: calc(100% / 3 - 14px);
@@ -116,14 +111,13 @@
 	position: absolute;
 	top: 20px;
 }
- .frame {
+.frame {
 	height: 33px;
 	right: 11px;
 	position: absolute;
 	top: 11px;
 	width: 33px;
 	border-radius: 30%;
-
 }
 
 .frame {
@@ -143,7 +137,11 @@
 .frame .heart {
 	width: 20px;
 }
-.empty{
+.empty {
 	display: flex;
 	justify-content: center;
+	height: calc(100vh - 380px);
+	@media only screen and (max-width: 992px) {
+		height: calc(100vh - 250px);
+	}
 }
