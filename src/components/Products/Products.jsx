@@ -15,9 +15,10 @@ const Products = ({ title, products = [], amount }) => {
 
 			<div className={s.list}>
 				{
-					list ? (
+					!list ? (
 						// <Preloader />
-						<p style={{
+						<p className={s.preloader} 
+						style={{
 							display: 'flex',
 							justifyContent: 'center',
 							width: '100%',

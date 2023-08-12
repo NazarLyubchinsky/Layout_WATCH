@@ -1,14 +1,15 @@
 /*
 Products
 */
-
-.products {
-	background: var(--dark);
-	padding: 0 22px 20px 22px;
+.preloader {
 	height: calc(100vh - 380px);
 	@media only screen and (max-width: 992px) {
 		height: calc(100vh - 250px);
 	}
+}
+.products {
+	background: var(--dark);
+	padding: 0 22px 20px 22px;
 }
 .title {
 	text-align: start;

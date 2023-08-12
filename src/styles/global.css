@@ -89,13 +89,15 @@ li {
 .container {
 	display: flex;
 	flex-wrap: wrap;
-	/* gap: 20px; */
+	/* gap: 20px;  */
 }
+
 .wrapper {
 	/* flex-grow: 1; */
 	margin-left: 274px;
 	width: 100%;
 }
+
 @media only screen and (max-width: 992px) {
 	.wrapper {
 		margin-left: 0;
@@ -104,10 +106,7 @@ li {
 
 section {
 	background: var(--dark);
-
 }
-
-
 
 button {
 	background: var(--violet-dark);
