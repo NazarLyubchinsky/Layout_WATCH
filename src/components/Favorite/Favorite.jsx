@@ -17,9 +17,7 @@ const Favorite = () => {
 			<h2 className={s.favorite__title} >Your favorite</h2>
 
 			{!favorite.length ? (
-				<div style={{
-					padding: '100px'
-				}} className={s.empty}>Here is empty</div>
+				<div  className={s.empty}>Here is empty</div>
 			) : (
 				<>
 					<div className={s.list}>
