@@ -16,13 +16,12 @@ const Products = ({ title, products = [], amount }) => {
 			<div className={s.list}>
 				{
 					!list ? (
-						// <Preloader />
-						<p className={s.preloader} 
-						style={{
-							display: 'flex',
-							justifyContent: 'center',
-							width: '100%',
-						}}>	No results</p>
+						<p className={s.preloader}
+							style={{
+								display: 'flex',
+								justifyContent: 'center',
+								width: '100%',
+							}}>	No results</p>
 					) : (
 						list.map(({ id, images, title, category: { name: cat } }) => (
 							<Link to={`/products/${id}`} key={id} className={s.product}>
