@@ -1,70 +1,71 @@
-# Getting Started with Create React App
+# Demo website of the WATCH store.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This repository contains code for a React application developed to create a user interface for a store. The store includes features to provide convenience and functionality for users.
 
-## Available Scripts
+## Table of Contents
 
-In the project directory, you can run:
+- [Live Demo](#live-demo)
+- [Description](#description)
+- [The main features of the store include](#main-features)
+- [Backend](#backend)
+- [Frontend](#frontend)
+- [UI Requirements](#ui-requirements)
+- [Instructions](#instructions)
+- [Contact](#contact)
 
-### `npm start`
+## Live Demo
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Check out the live project on Netlify: [([https://main--demo-book-list.netlify.app/](https://main--preeminent-travesseiro-4bf4a2.netlify.app/))](https://famous-fox-fdf650.netlify.app/)
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Please note that there might be issues with loading products from server on the live demo.
 
-### `npm test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Description
 
-### `npm run build`
+ The application is designed with user-friendly features and a responsive layout.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## main features
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Key Features 
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- Registration and Login: Registration and login are made easy with the option to either register as a new user or log in with an existing account.
+- Personal Profile: After logging in, you have the ability to update your personal information. You can modify your name, email address, password, and upload an avatar to personalize your account.
+- Search System: Our search system is conveniently located in the website header. You can search for products by their names.
+- Favorites: You can keep track of your favorite products.
+- Pages: Privacy Policy, FAQ, Contact Us
 
-### `npm run eject`
+## Backend
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+The application uses a fake REST API provided by https://fakeapi.platzi.com/en/rest/users
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Frontend
+- The latest version of React is used.
+- Functional components and JSX are employed.
+- Redux toolkit
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## UI Requirements
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+The application follows an eye-friendly design and is responsive.
 
-## Learn More
+## Instructions
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+To run the project on your local machine:
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+1. Clone this repository: `git clone [repo-link]`
+2. Navigate to the project directory: `cd [project-folder]`
+3. Install dependencies: `npm install`
+4. Run the Vite development server: `npm run start`
+5. Access the application in your browser at `http://localhost:3000` or link provided by vite
 
-### Code Splitting
+## Contact
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+For any inquiries or feedback, feel free to contact:
 
-### Analyzing the Bundle Size
+- Nazar Lyubchinskyi
+- GitHub: (https://github.com/NazarLyubchinsky)
+- linkedin: (https://www.linkedin.com/in/nazar-lyubchynskyi-37a89026b/)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
 
-### Making a Progressive Web App
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+Enjoy exploring the React application and its features!
 
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
